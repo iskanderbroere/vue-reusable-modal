@@ -1,4 +1,4 @@
-# @breach/modal
+# vue-reusable-modal
 
 ## Project setup
 ```

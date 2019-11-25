@@ -1,10 +1,10 @@
 {
-  "name": "@breach/modal",
+  "name": "vue-reusable-modal",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name @breach/modal ./src/index.ts",
+    "build": "vue-cli-service build --target lib --name vue-reusable-modal ./src/index.ts",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 6006",
