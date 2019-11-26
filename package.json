@@ -2,6 +2,8 @@
   "name": "vue-reusable-modal",
   "version": "0.0.0-development",
   "private": false,
+  "files": ["dist"],
+  "sideEffects": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name vue-reusable-modal ./src/index.ts",
@@ -47,6 +49,7 @@
     "semantic-release": "^15.13.31",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.2",
+    "vue-cli-plugin-webpack-bundle-analyzer": "^2.0.0",
     "vue-loader": "^15.7.2",
     "vue-template-compiler": "^2.6.10"
   },
