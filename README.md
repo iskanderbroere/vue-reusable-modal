@@ -29,8 +29,8 @@ yarn lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### TODO
+- [x] add aria-label/labelledby props and warnings
 - [ ] implement initialFocusRef if applicable
-- [ ] add aria-label/labelledby props and warnings
 - [ ] add tests
 - [ ] check if everything works when composing different components in a story
 - [ ] add vue transition support ( with composable components? )

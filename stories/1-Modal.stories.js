@@ -126,7 +126,11 @@ export const modalOverlay = () => ({
           veniam. Anim ex elit mollit aute nostrud culpa consequat incididunt
           aliqua sunt.
         </p>
-        <Modal isOpen={this.showDialog} onDismiss={this.close}>
+        <Modal
+          isOpen={this.showDialog}
+          onDismiss={this.close}
+          ariaLabel="Modal"
+        >
           <p>I have a nice border now.</p>
           <p>
             Note that we could have used the simpler <code>Dialog</code>{" "}

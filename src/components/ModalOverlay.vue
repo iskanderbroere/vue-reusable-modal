@@ -4,6 +4,8 @@
     :mountTo="rootBodyElementName"
     data-breach-modal-wrapper
     append
+    slim
+    data-dom-id="mounting portal"
   >
     <slot />
   </MountingPortal>

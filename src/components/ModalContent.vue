@@ -1,27 +1,19 @@
 <template>
-  <FocusLock returnFocus>
-    <div
-      role="dialog"
-      aria-modal="true"
-      data-breach-modal-content
-      tabIndex="-1"
-      @click.stop
-    >
-      <slot />
-    </div>
-  </FocusLock>
+  <div
+    role="dialog"
+    aria-modal="true"
+    data-breach-modal-content
+    tabIndex="-1"
+    @click.stop
+  >
+    <slot />
+  </div>
 </template>
 
 <script lang="ts">
 import { createComponent } from "@vue/composition-api";
-// @ts-ignore
-import FocusLock from "vue-focus-lock";
 
-export default createComponent({
-  components: {
-    FocusLock
-  }
-});
+export default createComponent({});
 </script>
 
 <style>

@@ -1,21 +1,28 @@
 <template>
-  <div
-    v-scroll-lock="true"
-    data-breach-modal-overlay
-    @mousedown="onMouseDown"
-    @click.stop="onClick"
-    @keydown.esc.stop="onEscapeKeyDown"
-    v-bind="$attrs"
-    v-on="$listeners"
-  >
-    <slot />
-  </div>
+  <FocusLock>
+    <div
+      v-scroll-lock="true"
+      data-breach-modal-overlay
+      @mousedown="onMouseDown"
+      @click.stop="onClick"
+      @keydown.esc.stop="onEscapeKeyDown"
+      v-bind="$attrs"
+      v-on="$listeners"
+    >
+      <slot />
+    </div>
+  </FocusLock>
 </template>
 
 <script lang="ts">
 import { createComponent, ref } from "@vue/composition-api";
+// @ts-ignore
+import FocusLock from "vue-focus-lock";
 
 export default createComponent({
+  components: {
+    FocusLock
+  },
   props: {
     allowPinchZoom: {
       type: Boolean,
@@ -34,6 +41,7 @@ export default createComponent({
     // }
     // };
     function onEscapeKeyDown(event: Event) {
+      console.log("dismiss in inner");
       context.emit("dismiss", event);
     }
 
