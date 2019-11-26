@@ -2,7 +2,7 @@
   <MountingPortal
     v-if="isOpen"
     :mountTo="rootBodyElementName"
-    data-breach-modal-wrapper
+    data-modal-wrapper
     append
     slim
     data-dom-id="mounting portal"

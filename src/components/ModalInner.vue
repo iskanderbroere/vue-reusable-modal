@@ -2,7 +2,7 @@
   <FocusLock>
     <div
       v-scroll-lock="true"
-      data-breach-modal-overlay
+      data-modal-overlay
       @mousedown="onMouseDown"
       @click.stop="onClick"
       @keydown.esc.stop="onEscapeKeyDown"
@@ -63,7 +63,7 @@ export default createComponent({
 </script>
 
 <style>
-[data-breach-modal-overlay] {
+[data-modal-overlay] {
   background: hsla(0, 0%, 0%, 0.33);
   position: fixed;
   top: 0;

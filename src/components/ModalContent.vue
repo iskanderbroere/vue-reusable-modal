@@ -2,7 +2,7 @@
   <div
     role="dialog"
     aria-modal="true"
-    data-breach-modal-content
+    data-modal-content
     tabIndex="-1"
     @click.stop
   >
@@ -17,7 +17,7 @@ export default createComponent({});
 </script>
 
 <style>
-[data-breach-modal-content] {
+[data-modal-content] {
   width: 50vw;
   margin: 10vh auto;
   background: white;
