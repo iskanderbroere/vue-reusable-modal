@@ -41,7 +41,6 @@ export default createComponent({
     // }
     // };
     function onEscapeKeyDown(event: Event) {
-      console.log("dismiss in inner");
       context.emit("dismiss", event);
     }
 

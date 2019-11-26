@@ -13,5 +13,7 @@ Vue.use(VueCompositionApi);
 
 import Modal from "./components/Modal.vue";
 import ModalOverlay from "./components/ModalOverlay.vue";
+import ModalInner from "./components/ModalInner.vue";
+import ModalContent from "./components/ModalContent.vue";
 
-export { Modal, ModalOverlay };
+export { Modal, ModalOverlay, ModalInner, ModalContent };
