@@ -16,7 +16,6 @@
 
 <script lang="ts">
 import { createComponent, ref } from "@vue/composition-api";
-// @ts-ignore
 import FocusLock from "vue-focus-lock";
 
 export default createComponent({

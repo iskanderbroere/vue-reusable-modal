@@ -18,9 +18,11 @@ import { createComponent, onMounted } from "@vue/composition-api";
 import ModalOverlay from "./ModalOverlay.vue";
 import ModalContent from "./ModalContent.vue";
 import ModalInner from "./ModalInner.vue";
-import { PropOptions } from "vue";
 
-function checkAriaLabels(props: any): void {
+function checkAriaLabels(props: {
+  ariaLabel?: string;
+  ariaLabelledBy?: string;
+}): void {
   const details =
     "\nSee https://www.w3.org/TR/wai-aria/#ariaLabel for details.";
   if (!props["ariaLabel"] && !props["ariaLabelledBy"]) {
@@ -50,7 +52,7 @@ export default createComponent({
     isOpen: {
       type: Boolean,
       required: true
-    } as PropOptions<boolean>,
+    },
     ariaLabel: {
       type: String
     },

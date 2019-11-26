@@ -12,15 +12,9 @@
 </template>
 
 <script lang="ts">
-import {
-  reactive,
-  computed,
-  createComponent,
-  onMounted,
-  ref
-} from "@vue/composition-api";
+import { createComponent, ref } from "@vue/composition-api";
 import { MountingPortal } from "portal-vue";
-// @ts-ignore
+
 export default createComponent({
   components: {
     MountingPortal
@@ -33,6 +27,7 @@ export default createComponent({
   },
   setup(props, context) {
     const rootBodyElementName = ref<HTMLDivElement>(
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       context.root.$el.ownerDocument!.body.nodeName
     );
     return {
