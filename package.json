@@ -1,6 +1,6 @@
 {
   "name": "vue-reusable-modal",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -8,7 +8,8 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@vue/composition-api": "^0.3.2",
@@ -44,6 +45,11 @@
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.2",
     "vue-loader": "^15.7.2",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "semantic-release": "^15.13.31"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iskanderbroere/vue-reusable-modal.git"
   }
 }
