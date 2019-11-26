@@ -30,6 +30,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### TODO
 - [x] add aria-label/labelledby props and warnings
+- [x] add travis ci
 - [ ] implement initialFocusRef if applicable
 - [ ] add tests
 - [ ] check if everything works when composing different components in a story
