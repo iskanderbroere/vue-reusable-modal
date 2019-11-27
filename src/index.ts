@@ -1,10 +1,8 @@
 import Vue from "vue";
 // import devtools from "@vue/devtools";
-import VueCompositionApi from "@vue/composition-api";
 import VScrollLock from "v-scroll-lock";
 
 Vue.use(VScrollLock);
-Vue.use(VueCompositionApi);
 
 // if (process.env.NODE_ENV === "development") {
 //   devtools.connect();

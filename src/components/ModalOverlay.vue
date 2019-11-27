@@ -12,10 +12,9 @@
 </template>
 
 <script lang="ts">
-import { createComponent, ref } from "@vue/composition-api";
 import { MountingPortal } from "portal-vue";
 
-export default createComponent({
+export default {
   components: {
     MountingPortal
   },
@@ -25,14 +24,11 @@ export default createComponent({
       required: true
     }
   },
-  setup(props, context) {
-    const rootBodyElementName = ref<HTMLDivElement>(
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      context.root.$el.ownerDocument!.body.nodeName
-    );
+  data() {
     return {
-      rootBodyElementName
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      rootBodyElementName: this.$root.$el.ownerDocument!.body.nodeName
     };
   }
-});
+};
 </script>

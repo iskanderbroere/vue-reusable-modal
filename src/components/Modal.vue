@@ -14,7 +14,6 @@
 </template>
 
 <script lang="ts">
-import { createComponent, onMounted } from "@vue/composition-api";
 import { IS_DEV } from "../utils";
 import ModalOverlay from "./ModalOverlay.vue";
 import ModalContent from "./ModalContent.vue";

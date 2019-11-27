@@ -11,9 +11,8 @@
 </template>
 
 <script lang="ts">
-import { createComponent } from "@vue/composition-api";
-
-export default createComponent({});
+// export an empty object to avoid TS errors when importing this component elsewhere
+export default {};
 </script>
 
 <style>
