@@ -15,7 +15,7 @@
 
 <script lang="ts">
 import { createComponent, onMounted } from "@vue/composition-api";
-import { IS_DEV } from "@/utils";
+import { IS_DEV } from "../utils";
 import ModalOverlay from "./ModalOverlay.vue";
 import ModalContent from "./ModalContent.vue";
 import ModalInner from "./ModalInner.vue";
@@ -42,7 +42,7 @@ function checkAriaLabels(props: {
   }
 }
 
-export default createComponent({
+export default {
   inheritAttrs: false,
   components: {
     ModalOverlay,
@@ -61,18 +61,15 @@ export default createComponent({
       type: String
     }
   },
-  setup(props, context) {
-    onMounted(() => {
-      if (IS_DEV) {
-        checkAriaLabels(props);
-      }
-    });
-    function onDismiss(event: Event) {
-      context.emit("dismiss", event);
+  mounted() {
+    if (IS_DEV) {
+      checkAriaLabels(this.$props);
     }
-    return {
-      onDismiss
-    };
+  },
+  methods: {
+    onDismiss(event: Event) {
+      this.$emit("dismiss", event);
+    }
   }
-});
+};
 </script>
