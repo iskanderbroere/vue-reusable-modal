@@ -5,6 +5,11 @@
 yarn install
 ```
 
+### Runs storybook to try out components
+```
+yarn storybook
+```
+
 ### Compiles and hot-reloads for development
 ```
 yarn serve
