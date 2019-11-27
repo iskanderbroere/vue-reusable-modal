@@ -1,60 +1,77 @@
 {
-  "name": "vue-reusable-modal",
-  "version": "0.0.0-development",
-  "private": false,
-  "files": ["dist"],
-  "sideEffects": false,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name vue-reusable-modal ./src/index.ts",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "semantic-release": "semantic-release"
-  },
-  "dependencies": {
-    "@vue/composition-api": "^0.3.2",
-    "core-js": "^3.4.2",
-    "portal-vue": "^2.1.6",
-    "v-scroll-lock": "^1.1.0",
-    "vue": "^2.6.10",
-    "vue-focus-lock": "^1.3.2"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.7.4",
-    "@storybook/addon-actions": "^5.2.6",
-    "@storybook/addon-links": "^5.2.6",
-    "@storybook/addons": "^5.2.6",
-    "@storybook/vue": "^5.2.6",
-    "@testing-library/vue": "^4.1.0",
-    "@types/jest": "^24.0.23",
-    "@typescript-eslint/eslint-plugin": "^2.7.0",
-    "@typescript-eslint/parser": "^2.7.0",
-    "@vue/cli-plugin-babel": "^4.0.0",
-    "@vue/cli-plugin-eslint": "^4.0.0",
-    "@vue/cli-plugin-typescript": "^4.0.0",
-    "@vue/cli-plugin-unit-jest": "^4.0.0",
-    "@vue/cli-service": "^4.0.0",
-    "@vue/devtools": "^5.3.3",
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "@vue/eslint-config-typescript": "5.0.1",
-    "@vue/test-utils": "1.0.0-beta.29",
-    "babel-loader": "^8.0.6",
-    "babel-preset-vue": "^2.0.2",
-    "eslint": "6.0.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-vue": "6.0.0",
-    "prettier": "^1.18.2",
-    "semantic-release": "^15.13.31",
-    "ts-loader": "^6.2.1",
-    "typescript": "^3.7.2",
-    "vue-cli-plugin-webpack-bundle-analyzer": "^2.0.0",
-    "vue-loader": "^15.7.2",
-    "vue-template-compiler": "^2.6.10"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/iskanderbroere/vue-reusable-modal.git"
-  }
+    "name": "vue-reusable-modal",
+    "version": "0.0.0-development",
+    "private": false,
+    "files": [
+        "dist"
+    ],
+    "sideEffects": false,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build --target lib --name vue-reusable-modal ./src/index.ts",
+        "test:unit": "vue-cli-service test:unit",
+        "lint": "vue-cli-service lint",
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "build-storybook",
+        "semantic-release": "semantic-release"
+    },
+    "dependencies": {
+        "@vue/composition-api": "^0.3.2",
+        "core-js": "^3.4.2",
+        "portal-vue": "^2.1.6",
+        "v-scroll-lock": "^1.1.0",
+        "vue": "^2.6.10",
+        "vue-focus-lock": "^1.3.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.7.4",
+        "@commitlint/cli": "^8.2.0",
+        "@commitlint/config-conventional": "^8.2.0",
+        "@storybook/addon-actions": "^5.2.6",
+        "@storybook/addon-links": "^5.2.6",
+        "@storybook/addons": "^5.2.6",
+        "@storybook/vue": "^5.2.6",
+        "@testing-library/vue": "^4.1.0",
+        "@types/jest": "^24.0.23",
+        "@typescript-eslint/eslint-plugin": "^2.7.0",
+        "@typescript-eslint/parser": "^2.7.0",
+        "@vue/cli-plugin-babel": "^4.0.0",
+        "@vue/cli-plugin-eslint": "^4.0.0",
+        "@vue/cli-plugin-typescript": "^4.0.0",
+        "@vue/cli-plugin-unit-jest": "^4.0.0",
+        "@vue/cli-service": "^4.0.0",
+        "@vue/devtools": "^5.3.3",
+        "@vue/eslint-config-prettier": "^6.0.0",
+        "@vue/eslint-config-typescript": "5.0.1",
+        "@vue/test-utils": "1.0.0-beta.29",
+        "babel-loader": "^8.0.6",
+        "babel-preset-vue": "^2.0.2",
+        "cz-conventional-changelog": "3.0.2",
+        "eslint": "6.0.0",
+        "eslint-plugin-prettier": "^3.1.1",
+        "eslint-plugin-vue": "6.0.0",
+        "husky": "^3.1.0",
+        "prettier": "^1.18.2",
+        "semantic-release": "^15.13.31",
+        "ts-loader": "^6.2.1",
+        "typescript": "^3.7.2",
+        "vue-cli-plugin-webpack-bundle-analyzer": "^2.0.0",
+        "vue-loader": "^15.7.2",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/iskanderbroere/vue-reusable-modal.git"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "husky": {
+        "hooks": {
+            "pre-push": "yarn build",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    }
 }
