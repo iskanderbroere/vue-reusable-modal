@@ -15,6 +15,7 @@
 
 <script lang="ts">
 import { createComponent, onMounted } from "@vue/composition-api";
+import { IS_DEV } from "@/utils";
 import ModalOverlay from "./ModalOverlay.vue";
 import ModalContent from "./ModalContent.vue";
 import ModalInner from "./ModalInner.vue";
@@ -59,14 +60,12 @@ export default createComponent({
     ariaLabelledBy: {
       type: String
     }
-    // initialFocusRef: {
-    //   type: Object,
-    //   default: () => {}
-    // }
   },
   setup(props, context) {
     onMounted(() => {
-      checkAriaLabels(props);
+      if (IS_DEV) {
+        checkAriaLabels(props);
+      }
     });
     function onDismiss(event: Event) {
       context.emit("dismiss", event);
