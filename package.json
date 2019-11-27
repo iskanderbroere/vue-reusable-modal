@@ -5,7 +5,16 @@
     "files": [
         "dist"
     ],
+    "main": "dist/vue-reusable-modal.common.js",
+    "browser": "dist/vue-reusable-modal.umd.js",
     "sideEffects": false,
+    "release": {
+        "plugins": [
+            "@semantic-release/commit-analyzer",
+            "@semantic-release/release-notes-generator",
+            "@semantic-release/npm"
+        ]
+    },
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build --target lib --name vue-reusable-modal ./src/index.ts",
