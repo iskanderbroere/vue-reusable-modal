@@ -14,7 +14,7 @@
   </FocusLock>
 </template>
 
-<script lang="ts">
+<script>
 import FocusLock from "vue-focus-lock";
 
 export default {
@@ -29,19 +29,19 @@ export default {
   },
   data() {
     return {
-      mouseDownTarget: null as EventTarget | null
+      mouseDownTarget: null
     };
   },
   methods: {
-    onEscapeKeyDown(event: Event) {
+    onEscapeKeyDown(event) {
       this.$emit("dismiss", event);
     },
-    onClick(event: Event) {
+    onClick(event) {
       if (this.mouseDownTarget === event.target) {
         this.$emit("dismiss", event);
       }
     },
-    onMouseDown(event: Event) {
+    onMouseDown(event) {
       this.mouseDownTarget = event.target;
     }
   }
