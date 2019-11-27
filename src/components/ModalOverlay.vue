@@ -1,10 +1,10 @@
 <template>
-  <Portal v-if="isOpen" data-modal-wrapper data-dom-id="portal">
+  <Portal v-if="isOpen && isBrowser" data-modal-wrapper data-dom-id="portal">
     <slot />
   </Portal>
 </template>
 
-<script lang="ts">
+<script>
 import { Portal } from "@linusborg/vue-simple-portal";
 
 export default {
@@ -16,6 +16,9 @@ export default {
       type: Boolean,
       required: true
     }
+  },
+  created() {
+    this.isBrowser = typeof window !== "undefined";
   }
 };
 </script>
