@@ -10,11 +10,6 @@
   </div>
 </template>
 
-<script lang="ts">
-// export an empty object to avoid TS errors when importing this component elsewhere
-export default {};
-</script>
-
 <style>
 [data-modal-content] {
   width: 50vw;

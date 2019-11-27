@@ -13,16 +13,13 @@
   </ModalOverlay>
 </template>
 
-<script lang="ts">
+<script>
 import { IS_DEV } from "../utils";
 import ModalOverlay from "./ModalOverlay.vue";
 import ModalContent from "./ModalContent.vue";
 import ModalInner from "./ModalInner.vue";
 
-function checkAriaLabels(props: {
-  ariaLabel?: string;
-  ariaLabelledBy?: string;
-}): void {
+function checkAriaLabels(props) {
   const details =
     "\nSee https://www.w3.org/TR/wai-aria/#ariaLabel for details.";
   if (!props["ariaLabel"] && !props["ariaLabelledBy"]) {
@@ -66,7 +63,7 @@ export default {
     }
   },
   methods: {
-    onDismiss(event: Event) {
+    onDismiss(event) {
       this.$emit("dismiss", event);
     }
   }
