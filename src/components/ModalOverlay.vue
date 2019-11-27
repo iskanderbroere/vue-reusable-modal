@@ -1,34 +1,21 @@
 <template>
-  <MountingPortal
-    v-if="isOpen"
-    :mountTo="rootBodyElementName"
-    data-modal-wrapper
-    append
-    slim
-    data-dom-id="mounting portal"
-  >
+  <Portal v-if="isOpen" data-modal-wrapper data-dom-id="portal">
     <slot />
-  </MountingPortal>
+  </Portal>
 </template>
 
 <script lang="ts">
-import { MountingPortal } from "portal-vue";
+import { Portal } from "@linusborg/vue-simple-portal";
 
 export default {
   components: {
-    MountingPortal
+    Portal
   },
   props: {
     isOpen: {
       type: Boolean,
       required: true
     }
-  },
-  data() {
-    return {
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      rootBodyElementName: this.$root.$el.ownerDocument!.body.nodeName
-    };
   }
 };
 </script>
