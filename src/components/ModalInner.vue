@@ -1,7 +1,8 @@
 <template>
-  <FocusLock>
+  <FocusTrap :active="isOpen">
     <div
       v-scroll-lock="true"
+      tabindex="-1"
       data-modal-overlay
       @mousedown="onMouseDown"
       @click.stop="onClick"
@@ -11,20 +12,20 @@
     >
       <slot />
     </div>
-  </FocusLock>
+  </FocusTrap>
 </template>
 
 <script>
-import FocusLock from "vue-focus-lock";
+import { FocusTrap } from "focus-trap-vue";
 
 export default {
   components: {
-    FocusLock
+    FocusTrap
   },
   props: {
-    allowPinchZoom: {
+    isOpen: {
       type: Boolean,
-      default: true
+      required: true
     }
   },
   data() {

@@ -1,6 +1,6 @@
 <template>
   <ModalOverlay :is-open="isOpen">
-    <ModalInner @dismiss="onDismiss">
+    <ModalInner @dismiss="onDismiss" :is-open="isOpen">
       <ModalContent
         v-bind="$attrs"
         v-on="$listeners"

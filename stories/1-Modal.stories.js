@@ -131,14 +131,16 @@ export const modalOverlay = () => ({
           onDismiss={this.close}
           ariaLabel="Modal"
         >
-          <p>I have a nice border now.</p>
-          <p>
-            Note that we could have used the simpler <code>Dialog</code>{" "}
-            instead.
-          </p>
-          <button id="modal-close-button" onClick={this.close}>
-            Got it.
-          </button>
+          <div>
+            <p>I have a nice border now.</p>
+            <p>
+              Note that we could have used the simpler <code>Dialog</code>{" "}
+              instead.
+            </p>
+            <button id="modal-close-button" onClick={this.close}>
+              Got it.
+            </button>
+          </div>
         </Modal>
       </div>
     );
