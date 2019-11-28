@@ -9,7 +9,7 @@
     "module": "dist/vue-reusable-modal.esm.js",
     "sideEffects": false,
     "browserslist": [
-        "last 1 version",
+        "last 2 versions",
         "> 1%"
     ],
     "release": {
@@ -50,10 +50,10 @@
     },
     "dependencies": {
         "@linusborg/vue-simple-portal": "^0.1.4",
+        "body-scroll-lock": "^2.6.4",
         "core-js": "^3.4.2",
         "focus-trap": "^5.1.0",
         "focus-trap-vue": "^0.0.4",
-        "v-scroll-lock": "^1.1.0",
         "vue": "^2.6.10"
     },
     "devDependencies": {

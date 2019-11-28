@@ -1,7 +1,6 @@
 <template>
   <FocusTrap :active="isOpen">
     <div
-      v-scroll-lock="true"
       tabindex="-1"
       data-modal-overlay
       @mousedown="onMouseDown"
@@ -17,6 +16,7 @@
 
 <script>
 import { FocusTrap } from "focus-trap-vue";
+import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 
 export default {
   components: {
@@ -45,6 +45,12 @@ export default {
     onMouseDown(event) {
       this.mouseDownTarget = event.target;
     }
+  },
+  mounted() {
+    disableBodyScroll(this.$el);
+  },
+  destroyed() {
+    clearAllBodyScrollLocks();
   }
 };
 </script>

@@ -1,10 +1,4 @@
-import Vue from "vue";
-// import devtools from "@vue/devtools";
-import VScrollLock from "v-scroll-lock";
-
-Vue.use(VScrollLock);
-
-// if (process.env.NODE_ENV === "development") {
+// import devtools from "@vue/devtools";// if (process.env.NODE_ENV === "development") {
 //   devtools.connect();
 // }
 
