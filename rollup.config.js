@@ -2,6 +2,7 @@ import resolve from "rollup-plugin-node-resolve";
 import commonjs from "rollup-plugin-commonjs";
 import vue from "rollup-plugin-vue";
 import typescript from "@wessberg/rollup-plugin-ts";
+import { terser } from "rollup-plugin-terser";
 
 export default [
   // ESM build to be used with webpack/rollup.
@@ -67,7 +68,8 @@ export default [
       typescript({
         browserslist: ["last 1 version", "> 5%"],
         transpiler: "babel"
-      })
+      }),
+      terser()
     ]
   }
 ];
