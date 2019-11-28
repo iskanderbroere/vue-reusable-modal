@@ -9,10 +9,7 @@ export default [
     output: {
       format: "esm",
       file: "dist/vue-reusable-modal.esm.js",
-      name: "VueReusableModal",
-      globals: {
-        vue: "Vue"
-      }
+      name: "VueReusableModal"
     },
     external: ["vue"],
     plugins: [resolve(), commonjs(), vue()]
@@ -23,26 +20,9 @@ export default [
     output: {
       format: "cjs",
       file: "dist/vue-reusable-modal.ssr.js",
-      name: "VueReusableModal",
-      globals: {
-        vue: "Vue"
-      }
-    },
-    external: ["vue"],
-    plugins: [resolve(), commonjs(), vue({ template: { optimizeSSR: true } })]
-  },
-  // Browser build.
-  {
-    input: "src/index.ts",
-    output: {
-      format: "iife",
-      file: "dist/vue-reusable-modal.js",
-      globals: {
-        vue: "Vue"
-      },
       name: "VueReusableModal"
     },
     external: ["vue"],
-    plugins: [resolve(), commonjs(), vue()]
+    plugins: [resolve(), commonjs(), vue({ template: { optimizeSSR: true } })]
   }
 ];

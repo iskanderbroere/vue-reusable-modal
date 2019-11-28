@@ -7,8 +7,6 @@
     ],
     "main": "dist/vue-reusable-modal.ssr.js",
     "module": "dist/vue-reusable-modal.esm.js",
-    "browser": "dist/vue-reusable-modal.js",
-    "unpkg": "dist/vue-reusable-modal.js",
     "sideEffects": false,
     "browserslist": [
         "last 1 version",
@@ -90,7 +88,6 @@
         "rollup": "^1.27.5",
         "rollup-plugin-commonjs": "^10.1.0",
         "rollup-plugin-node-resolve": "^5.2.0",
-        "rollup-plugin-terser": "^5.1.2",
         "rollup-plugin-typescript": "^1.0.1",
         "rollup-plugin-vue": "^5.1.4",
         "semantic-release": "^15.13.31",
