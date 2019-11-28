@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { IS_DEV } from "../utils";
+import { IS_DEV } from "../utils/index.ts";
 import ModalOverlay from "./ModalOverlay.vue";
 import ModalContent from "./ModalContent.vue";
 import ModalInner from "./ModalInner.vue";
