@@ -39,14 +39,12 @@
         ]
     },
     "scripts": {
-        "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build --target lib --name vue-reusable-modal ./src/index.ts",
-        "test:unit": "vue-cli-service test:unit",
-        "lint": "vue-cli-service lint",
-        "rollup": "NODE_ENV=production rm -rf dist && rollup -c",
-        "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook",
-        "semantic-release": "semantic-release"
+        "build": "NODE_ENV=production rm -rf dist && rollup -c",
+        "lint": "vue-cli-service lint",
+        "semantic-release": "semantic-release",
+        "storybook": "start-storybook -p 6006",
+        "test:unit": "vue-cli-service test:unit"
     },
     "dependencies": {
         "@linusborg/vue-simple-portal": "^0.1.4",
