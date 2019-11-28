@@ -16,7 +16,11 @@
 
 <script>
 import { FocusTrap } from "focus-trap-vue";
-import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
+// ISSUE: https://github.com/willmcpo/body-scroll-lock/issues/120
+import {
+  disableBodyScroll,
+  clearAllBodyScrollLocks
+} from "body-scroll-lock/lib/bodyScrollLock.es6";
 
 export default {
   components: {
