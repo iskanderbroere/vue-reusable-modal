@@ -10,6 +10,10 @@
     "browser": "dist/vue-reusable-modal.js",
     "unpkg": "dist/vue-reusable-modal.js",
     "sideEffects": false,
+    "browserslist": [
+        "last 1 version",
+        "> 1%"
+    ],
     "release": {
         "plugins": [
             [
@@ -75,7 +79,6 @@
         "@vue/eslint-config-prettier": "^6.0.0",
         "@vue/eslint-config-typescript": "5.0.1",
         "@vue/test-utils": "1.0.0-beta.29",
-        "@wessberg/rollup-plugin-ts": "^1.1.80",
         "babel-loader": "^8.0.6",
         "babel-preset-vue": "^2.0.2",
         "cz-conventional-changelog": "3.0.2",

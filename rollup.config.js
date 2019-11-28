@@ -1,7 +1,6 @@
 import resolve from "rollup-plugin-node-resolve";
 import commonjs from "rollup-plugin-commonjs";
 import vue from "rollup-plugin-vue";
-import typescript from "@wessberg/rollup-plugin-ts";
 import { terser } from "rollup-plugin-terser";
 
 export default [
@@ -17,15 +16,7 @@ export default [
       }
     },
     external: ["vue"],
-    plugins: [
-      resolve(),
-      commonjs(),
-      vue(),
-      typescript({
-        browserslist: ["last 1 version", "> 5%"],
-        transpiler: "babel"
-      })
-    ]
+    plugins: [resolve(), commonjs(), vue()]
   },
   // SSR build.
   {
@@ -39,15 +30,7 @@ export default [
       }
     },
     external: ["vue"],
-    plugins: [
-      resolve(),
-      commonjs(),
-      vue({ template: { optimizeSSR: true } }),
-      typescript({
-        browserslist: ["node 12"],
-        transpiler: "babel"
-      })
-    ]
+    plugins: [resolve(), commonjs(), vue({ template: { optimizeSSR: true } })]
   },
   // Browser build.
   {
@@ -61,15 +44,6 @@ export default [
       name: "VueReusableModal"
     },
     external: ["vue"],
-    plugins: [
-      resolve(),
-      commonjs(),
-      vue(),
-      typescript({
-        browserslist: ["last 1 version", "> 5%"],
-        transpiler: "babel"
-      }),
-      terser()
-    ]
+    plugins: [resolve(), commonjs(), vue(), terser()]
   }
 ];
