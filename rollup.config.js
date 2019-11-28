@@ -1,7 +1,6 @@
 import resolve from "rollup-plugin-node-resolve";
 import commonjs from "rollup-plugin-commonjs";
 import vue from "rollup-plugin-vue";
-import { terser } from "rollup-plugin-terser";
 
 export default [
   // ESM build to be used with webpack/rollup.
@@ -44,6 +43,6 @@ export default [
       name: "VueReusableModal"
     },
     external: ["vue"],
-    plugins: [resolve(), commonjs(), vue(), terser()]
+    plugins: [resolve(), commonjs(), vue()]
   }
 ];
