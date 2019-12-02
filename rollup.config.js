@@ -9,7 +9,7 @@ export default [
     output: {
       format: "esm",
       file: "dist/vue-reusable-modal.esm.js",
-      name: "VueReusableModal"
+      exports: "named"
     },
     external: ["vue"],
     plugins: [
@@ -27,8 +27,10 @@ export default [
     input: "src/index.ts",
     output: {
       format: "cjs",
+      compact: true,
       file: "dist/vue-reusable-modal.ssr.js",
-      name: "VueReusableModal"
+      name: "VueReusableModal",
+      exports: "named"
     },
     external: ["vue"],
     plugins: [
