@@ -1,6 +1,7 @@
 import resolve from "rollup-plugin-node-resolve";
 import commonjs from "rollup-plugin-commonjs";
 import vue from "rollup-plugin-vue";
+import { terser } from "rollup-plugin-terser";
 
 export default [
   // ESM build to be used with webpack/rollup.
@@ -56,7 +57,12 @@ export default [
     plugins: [
       resolve(),
       commonjs(),
-      vue({ template: { optimizeSSR: true, isProduction: true } })
+      vue({ template: { isProduction: true } }),
+      terser({
+        output: {
+          ecma: 5
+        }
+      })
     ]
   }
 ];
