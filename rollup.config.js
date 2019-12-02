@@ -12,7 +12,15 @@ export default [
       name: "VueReusableModal"
     },
     external: ["vue"],
-    plugins: [resolve(), commonjs(), vue()]
+    plugins: [
+      resolve(),
+      commonjs(),
+      vue({
+        template: {
+          isProduction: true
+        }
+      })
+    ]
   },
   // SSR build.
   {
@@ -23,6 +31,10 @@ export default [
       name: "VueReusableModal"
     },
     external: ["vue"],
-    plugins: [resolve(), commonjs(), vue({ template: { optimizeSSR: true } })]
+    plugins: [
+      resolve(),
+      commonjs(),
+      vue({ template: { optimizeSSR: true, isProduction: true } })
+    ]
   }
 ];
