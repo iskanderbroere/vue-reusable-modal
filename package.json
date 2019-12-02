@@ -7,6 +7,7 @@
     ],
     "main": "dist/vue-reusable-modal.ssr.js",
     "module": "dist/vue-reusable-modal.esm.js",
+    "unpkg": "dist/vue-reusable-modal.min.js",
     "sideEffects": false,
     "browserslist": [
         "last 2 versions",

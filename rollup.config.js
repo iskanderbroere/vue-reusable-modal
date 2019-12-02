@@ -38,5 +38,25 @@ export default [
       commonjs(),
       vue({ template: { optimizeSSR: true, isProduction: true } })
     ]
+  },
+  // browser build
+  {
+    input: "src/index.ts",
+    output: {
+      format: "iife",
+      compact: true,
+      file: "dist/vue-reusable-modal.min.js",
+      name: "VueReusableModal",
+      exports: "named",
+      globals: {
+        vue: "Vue"
+      }
+    },
+    external: ["vue"],
+    plugins: [
+      resolve(),
+      commonjs(),
+      vue({ template: { optimizeSSR: true, isProduction: true } })
+    ]
   }
 ];
