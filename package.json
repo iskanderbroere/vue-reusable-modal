@@ -43,7 +43,7 @@
     },
     "scripts": {
         "build-storybook": "build-storybook",
-        "build": "NODE_ENV=production rm -rf dist && rollup -c",
+        "build": "NODE_ENV=production rm -rf dist && rollup -c && cp src/css/vue-reusable-modal.css dist/vue-reusable-modal.css",
         "lint": "vue-cli-service lint",
         "semantic-release": "semantic-release",
         "storybook": "start-storybook -p 6006",
