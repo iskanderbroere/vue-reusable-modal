@@ -40,3 +40,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - [ ] add tests
 - [ ] check if everything works when composing different components in a story
 - [ ] add vue transition support ( with composable components? )
+- [ ] support @ alias in combination with rollup
+- [ ] emit type declarations
+- [ ] extract css with rollup-plugin-postcss
