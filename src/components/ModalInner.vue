@@ -14,15 +14,18 @@
   </FocusTrap>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from "vue";
 import { FocusTrap } from "focus-trap-vue";
 // ISSUE: https://github.com/willmcpo/body-scroll-lock/issues/120
 import {
   disableBodyScroll,
   clearAllBodyScrollLocks
+  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+  // @ts-ignore
 } from "body-scroll-lock/lib/bodyScrollLock.es6";
 
-export default {
+export default Vue.extend({
   components: {
     FocusTrap
   },
@@ -38,15 +41,15 @@ export default {
     };
   },
   methods: {
-    onEscapeKeyDown(event) {
+    onEscapeKeyDown(event: any) {
       this.$emit("dismiss", event);
     },
-    onClick(event) {
+    onClick(event: any) {
       if (this.mouseDownTarget === event.target) {
         this.$emit("dismiss", event);
       }
     },
-    onMouseDown(event) {
+    onMouseDown(event: any) {
       this.mouseDownTarget = event.target;
     }
   },
@@ -56,6 +59,5 @@ export default {
   destroyed() {
     clearAllBodyScrollLocks();
   }
-};
+});
 </script>
-
