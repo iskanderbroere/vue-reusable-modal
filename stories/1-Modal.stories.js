@@ -1,5 +1,6 @@
 import { Modal } from "../src/index.ts";
 import { action } from "@storybook/addon-actions";
+import "../src/css/vue-reusable-modal.css";
 
 export default {
   title: "Modal"
