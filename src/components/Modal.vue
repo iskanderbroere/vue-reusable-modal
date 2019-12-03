@@ -1,15 +1,13 @@
 <template>
-  <ModalOverlay :is-open="isOpen">
-    <ModalInner @dismiss="onDismiss" :is-open="isOpen">
-      <ModalContent
-        v-bind="$attrs"
-        v-on="$listeners"
-        :aria-label="ariaLabel"
-        :aria-labelledby="ariaLabelledBy"
-      >
-        <slot />
-      </ModalContent>
-    </ModalInner>
+  <ModalOverlay :is-open="isOpen" @dismiss="onDismiss">
+    <ModalContent
+      v-bind="$attrs"
+      v-on="$listeners"
+      :aria-label="ariaLabel"
+      :aria-labelledby="ariaLabelledBy"
+    >
+      <slot />
+    </ModalContent>
   </ModalOverlay>
 </template>
 
@@ -17,7 +15,6 @@
 import { IS_DEV } from "../utils/index.ts";
 import ModalOverlay from "./ModalOverlay.vue";
 import ModalContent from "./ModalContent.vue";
-import ModalInner from "./ModalInner.vue";
 
 function checkAriaLabels(props) {
   const details =
@@ -42,8 +39,7 @@ export default {
   inheritAttrs: false,
   components: {
     ModalOverlay,
-    ModalContent,
-    ModalInner
+    ModalContent
   },
   props: {
     isOpen: {

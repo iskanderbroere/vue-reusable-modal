@@ -1,15 +1,20 @@
 <template>
-  <Portal v-if="isOpen && isBrowser" data-modal-wrapper data-dom-id="portal">
-    <slot />
+  <Portal v-if="isOpen && isBrowser" data-modal-wrapper>
+    <ModalInner :is-open="isOpen" v-bind="$attrs" v-on="$listeners">
+      <slot />
+    </ModalInner>
   </Portal>
 </template>
 
 <script>
 import { Portal } from "@linusborg/vue-simple-portal";
+import ModalInner from "./ModalInner.vue";
 
 export default {
+  inheritAttrs: false,
   components: {
-    Portal
+    Portal,
+    ModalInner
   },
   props: {
     isOpen: {
