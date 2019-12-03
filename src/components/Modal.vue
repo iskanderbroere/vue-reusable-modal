@@ -36,6 +36,7 @@ function checkAriaLabels(props) {
 }
 
 export default {
+  name: "Modal",
   inheritAttrs: false,
   components: {
     ModalOverlay,

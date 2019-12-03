@@ -26,6 +26,7 @@ import {
 } from "body-scroll-lock/lib/bodyScrollLock.es6";
 
 export default Vue.extend({
+  name: "ModalInner",
   components: {
     FocusTrap
   },

@@ -11,6 +11,7 @@ import { Portal } from "@linusborg/vue-simple-portal";
 import ModalInner from "./ModalInner.vue";
 
 export default {
+  name: "ModalOverlay",
   inheritAttrs: false,
   components: {
     Portal,
