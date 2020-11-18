@@ -94,7 +94,7 @@
         "rollup-plugin-typescript": "^1.0.1",
         "rollup-plugin-typescript2": "^0.25.2",
         "rollup-plugin-vue": "^5.1.4",
-        "semantic-release": "^15.13.31",
+        "semantic-release": "^17.2.3",
         "ts-loader": "^6.2.1",
         "typescript": "^3.7.2",
         "vue-loader": "^15.7.2",
